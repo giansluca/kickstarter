@@ -6,7 +6,8 @@
     "scripts": {
         "test": "jest ./test --detectOpenHandles",
         "compile": "node scripts/compile",
-        "deploy": "node scripts/deploy"
+        "deploy": "node scripts/deploy",
+        "lint": "eslint scripts"
     },
     "author": "",
     "license": "ISC",
