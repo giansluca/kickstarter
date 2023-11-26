@@ -14,7 +14,7 @@ const config = {
     },
     wallet: {
         privateKey: process.env.PRIVATE_KEY,
-        account: process.env.GOERLI_ACCOUNT_2,
+        account: process.env.ACCOUNT_ADDRESS,
         providerUrl: process.env.PROVIDER_URL,
     },
 };
