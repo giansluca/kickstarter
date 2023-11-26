@@ -13,9 +13,9 @@ const config = {
         commit: process.env.APP_COMMIT,
     },
     wallet: {
-        privateKey: process.env.PRIVATE_KEY,
-        account: process.env.ACCOUNT_ADDRESS,
         providerUrl: process.env.PROVIDER_URL,
+        accountAddress: process.env.ACCOUNT_ADDRESS,
+        accountPrivateKey: process.env.ACCOUNT_PRIVATE_KEY
     },
 };
 

@@ -1,5 +1,5 @@
 const ganache = require("ganache");
-const Web3 = require("web3");
+const { Web3 } = require("web3");
 
 const compiledFactory = require("../contracts/build/CampaignFactory.json");
 const compiledCampaign = require("../contracts/build/Campaign.json");
@@ -101,7 +101,7 @@ describe("Test contract", () => {
 
         // Then
         expect(request.description).toBe("Buy batteries");
-        expect(request.value).toBe(web3.utils.toWei("0.5", "ether"));
+        expect(request.value.toString()).toBe(web3.utils.toWei("0.5", "ether"));
     });
 
     it("should process requests", async () => {

@@ -1,5 +1,5 @@
 const HDWalletProvider = require("@truffle/hdwallet-provider");
-const Web3 = require("web3");
+const { Web3 } = require("web3");
 const kickstarterContractFile = require("../contracts/build/CampaignFactory.json");
 const config = require("./config");
 
@@ -11,7 +11,7 @@ let web3;
 
 function init() {
     provider = new HDWalletProvider({
-        privateKeys: [config.wallet.privateKey],
+        privateKeys: [config.wallet.accountPrivateKey],
         providerOrUrl: config.wallet.providerUrl,
     });
 
@@ -27,7 +27,7 @@ async function deploy() {
         init();
 
         const accounts = await web3.eth.getAccounts();
-        const account = accounts.find((account) => account === config.wallet.account);
+        const account = accounts.find((account) => account === config.wallet.accountAddress);
 
         if (!account) throw new Error("no account");
 
